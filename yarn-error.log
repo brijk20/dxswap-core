@@ -1,0 +1,68 @@
+Arguments: 
+  /usr/local/bin/node /Users/brijeshkuvadiya/.yarn/bin/yarn.js install
+
+PATH: 
+  /Users/brijeshkuvadiya/.yarn/bin:/Users/brijeshkuvadiya/.config/yarn/global/node_modules/.bin:/Users/brijeshkuvadiya/.local/share/solana/install/active_release/bin:/Users/brijeshkuvadiya/anaconda3/bin:/Users/brijeshkuvadiya/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public/:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/brijeshkuvadiya/.cargo/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  16.5.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOSPC: no space left on device, copyfile '/Users/brijeshkuvadiya/Library/Caches/Yarn/v6/npm-command-exists-1.2.9-c50725af3808c8ab0260fd60b01fbfa25b954f69-integrity/node_modules/command-exists/README.md' -> '/Users/brijeshkuvadiya/Documents/GitHub/dxswap-core/node_modules/command-exists/README.md'
+
+npm manifest: 
+  {
+    "name": "dxswap-core",
+    "version": "0.3.6",
+    "files": [
+      "contracts",
+      "build"
+    ],
+    "engines": {
+      "node": ">=10"
+    },
+    "devDependencies": {
+      "@types/chai": "^4.2.6",
+      "@types/mocha": "^5.2.7",
+      "arb-ethers-web3-bridge": "^0.7.3",
+      "chai": "^4.2.0",
+      "dotenv": "^8.2.0",
+      "ethereum-waffle": "^2.4.1",
+      "ethereumjs-util": "^6.2.0",
+      "ethers": "^4.0.45",
+      "mocha": "^6.2.2",
+      "prettier": "^1.19.1",
+      "rimraf": "^3.0.0",
+      "solc": "0.5.16",
+      "truffle-flattener": "^1.4.4",
+      "ts-node": "^8.5.4",
+      "@truffle/hdwallet-provider": "^1.2.6"
+    },
+    "scripts": {
+      "lint": "yarn prettier ./test/*.ts --check",
+      "lint:fix": "yarn prettier ./test/*.ts --write",
+      "clean": "rimraf ./build/",
+      "precompile": "yarn clean",
+      "compile": "waffle .waffle.json",
+      "pretest": "yarn compile",
+      "test": "mocha",
+      "prepublishOnly": "yarn test",
+      "flattener": "./scripts/flattener.sh"
+    },
+    "license": "AGPL-3.0-or-later",
+    "dependencies": {
+      "typescript": "^3.9.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
